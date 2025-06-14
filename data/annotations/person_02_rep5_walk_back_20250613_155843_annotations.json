@@ -1,0 +1,11 @@
+[
+  {
+    "activity": "walk_back",
+    "start_frame": 0,
+    "start_time": 0.0,
+    "end_frame": 173,
+    "end_time": 5.8,
+    "confidence": 1.0,
+    "method": "automatic_filename"
+  }
+]

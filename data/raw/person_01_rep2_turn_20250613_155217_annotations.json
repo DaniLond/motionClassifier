@@ -1,0 +1,11 @@
+[
+  {
+    "activity": "turn",
+    "start_frame": 0,
+    "start_time": 0.0,
+    "end_frame": 199,
+    "end_time": 6.666666666666667,
+    "confidence": 1.0,
+    "method": "automatic_filename"
+  }
+]

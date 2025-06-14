@@ -1,0 +1,11 @@
+[
+  {
+    "activity": "stand",
+    "start_frame": 0,
+    "start_time": 0.0,
+    "end_frame": 76,
+    "end_time": 2.566666666666667,
+    "confidence": 1.0,
+    "method": "automatic_filename"
+  }
+]

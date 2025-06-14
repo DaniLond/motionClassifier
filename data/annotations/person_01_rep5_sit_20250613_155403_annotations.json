@@ -1,0 +1,11 @@
+[
+  {
+    "activity": "sit",
+    "start_frame": 0,
+    "start_time": 0.0,
+    "end_frame": 90,
+    "end_time": 3.033333333333333,
+    "confidence": 1.0,
+    "method": "automatic_filename"
+  }
+]

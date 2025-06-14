@@ -1,76 +1,57 @@
-# Tennis Motion Tracker
+# Sistema de Detección de Actividades Humanas
 
-Sistema de seguimiento de movimientos de tenis utilizando MediaPipe para la detección de poses y análisis de movimientos.
+Este proyecto es un sistema completo para la detección y clasificación de actividades humanas en videos, utilizando técnicas de visión por computadora y aprendizaje automático. El sistema incluye módulos para la recolección de datos, extracción de características, anotación de videos, preprocesamiento de datos, entrenamiento de modelos y una interfaz para detección en tiempo real.
 
-## Características
+## Características principales
 
-- Detección de poses en tiempo real
-- Seguimiento de articulaciones clave para movimientos de tenis
-- Cálculo de ángulos de hombros y codos
-- Interfaz gráfica con visualización de FPS y ángulos
+- **Grabación de videos**: Captura de videos de actividades humanas con metadatos integrados.
+- **Anotación flexible**: Soporte para anotación.
+- **Extracción de poses**: Detección de landmarks corporales usando MediaPipe.
+- **Procesamiento de datos**: Suavizado de landmarks y extracción de características de movimiento.
+- **Modelos de ML**: Entrenamiento de múltiples modelos (Random Forest, SVM, XGBoost) con selección automática del mejor.
 
-## Estructura del Proyecto
+## Componentes del sistema
 
-```
-motionClassifier/
-├── src/
-│   ├── models/
-│   │   └── pose_detector.py
-│   ├── utils/
-│   │   └── angle_utils.py
-│   └── tennis_tracker.py
-├── data/
-│   ├── raw/
-│   └── processed/
-├── requirements.txt
-└── README.md
-```
-
-## Requisitos
-
-- Python 3.10 o superior
-- Webcam funcional
-- Dependencias listadas en `requirements.txt`
+1. **`VideoRecorder`**: Graba videos de actividades con etiquetas integradas.
+2. **`VideoAnnotator`**: Herramienta para anotar videos con diferentes métodos.
+3. **`PoseExtractor`**: Extrae landmarks corporales y características derivadas.
+4. **`DataProcessor`**: Preprocesa y prepara los datos para entrenamiento.
+5. **`ActivityClassifierTrainer`**: Entrena y evalúa modelos de clasificación.
+6. **`RealTimeActivityClassifier`**: Clasifica actividades en tiempo real.
 
 ## Instalación
 
-1. Clonar el repositorio:
-```bash
-git clone https://github.com/DaniLond/motionClassifier.git
-cd motionClassifier
-```
+1. Clona el repositorio:
+   ```bash
+   https://github.com/DaniLond/motionClassifier.git
 
-2. Crear un entorno virtual (opcional pero recomendado):
-```bash
-python -m venv venv
-source venv/bin/activate  # En Windows: venv\Scripts\activate
-```
+2. Instala las dependencias:
+    ```bash
+   pip install -r requirements.txt
 
-3. Instalar dependencias:
-```bash
-pip install -r requirements.txt
-```
+### Uso
 
-## Uso
+1. Pipeline completo
+Ejecuta el pipeline completo (recolección de datos, procesamiento, entrenamiento):
+    ```bash
+    python main.py
 
-1. Ejecutar el programa principal:
-```bash
-python src/tennis_tracker.py
-```
+2. Demo en tiempo real
+    ```bash
+    python src/demo.py --model models/best_activity_classifier.pkl
 
-2. Controles:
-- Presionar 'q' para salir del programa
+## Actividades soportadas
 
-## Características Técnicas
+El sistema puede detectar las siguientes actividades:
 
-- Utiliza MediaPipe para la detección de poses
-- Calcula ángulos de articulaciones en tiempo real
-- Muestra FPS y ángulos en la interfaz
-- Preparado para futura integración con clasificación de movimientos
+- walk_forward: Caminar hacia adelante
 
-## Próximas Características
+- walk_back: Caminar hacia atrás
 
-- Clasificación de movimientos de tenis (saque, derecha, revés, volea, smash)
-- Almacenamiento de datos para entrenamiento
-- Interfaz mejorada con más información
-- Análisis de técnica y retroalimentación 
+- turn: Girar
+
+- sit: Sentarse
+
+- stand: Pararse
+
+- idle: Inactividad
