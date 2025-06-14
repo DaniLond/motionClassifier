@@ -1,3 +1,8 @@
+# Integrantes
+- Leidy Daniela Londoño
+- Danna Valentina 
+- Isabella Huila
+
 # Sistema de Detección de Actividades Humanas
 
 Este proyecto es un sistema completo para la detección y clasificación de actividades humanas en videos, utilizando técnicas de visión por computadora y aprendizaje automático. El sistema incluye módulos para la recolección de datos, extracción de características, anotación de videos, preprocesamiento de datos, entrenamiento de modelos y una interfaz para detección en tiempo real.
@@ -53,5 +58,3 @@ El sistema puede detectar las siguientes actividades:
 - sit: Sentarse
 
 - stand: Pararse
-
-- idle: Inactividad
