@@ -39,7 +39,7 @@ Este proyecto es un sistema completo para la detección y clasificación de acti
 1. Pipeline completo
 Ejecuta el pipeline completo (recolección de datos, procesamiento, entrenamiento):
     ```bash
-    python main.py
+    python src/train_model.py
 
 2. Demo en tiempo real
     ```bash
